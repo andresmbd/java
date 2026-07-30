@@ -5,9 +5,28 @@ import javax.swing.JOptionPane;
 public class Main {
 
     public static void main(String[] args) {
+        
         String numeroCuenta= JOptionPane.showInputDialog("Numero de cuenta");
+       
         String nombreTitular= JOptionPane.showInputDialog("Nombre del titular");
-        int saldoInicial = Integer.parseInt(JOptionPane.showInputDialog("Saldo inicial"));
+        
+        int saldoInicial = 0;
+        boolean valido = false;
+        
+        
+            while (valido == false) {   
+                try { 
+                    saldoInicial = Integer.parseInt(JOptionPane.showInputDialog("Saldo inicial"));
+                //if()
+                }
+            
+            
+            
+                catch (NumberFormatException e) {
+                   JOptionPane.showMessageDialog(null, "Debe ser un numero");
+               }
+            }
+        
 
         CuentaBancaria cuenta = new CuentaBancaria(numeroCuenta, nombreTitular, saldoInicial);
         
@@ -21,7 +40,7 @@ public class Main {
                   + "\n3. Retirar dinero"
                   + "\n4. Consultar saldo"
                   + "\n5. Desactivar cuenta"
-                  + "\n6. Salir")); 
+                  + "\n6. Salir").trim()); 
             
             switch (opcion){
                 case 1 -> {
@@ -56,6 +75,7 @@ public class Main {
                         cuenta.desactivarCuenta(); 
                 }
                 case 6 -> JOptionPane.showMessageDialog(null, "Gracias por utilizar Banco Riwi.");
+                default -> JOptionPane.showMessageDialog(null, "Opcion incorrecta, intenta nuevamente");
             }
         } while (opcion != 6);
     }
