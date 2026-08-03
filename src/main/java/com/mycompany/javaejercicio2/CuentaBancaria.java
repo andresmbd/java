@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-
 package com.mycompany.javaejercicio2;
 
-
-=======
-package com.mycompany.javaejercicio2;
-
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
 public class CuentaBancaria {
     private String numeroCuenta;
     private String nombreTitular;
@@ -21,19 +14,13 @@ public class CuentaBancaria {
     {
         this.numeroCuenta = numeroCuenta;
         this.nombreTitular = nombreTitular;
-<<<<<<< HEAD
-        this.saldo = saldoInicial;
-=======
         //this.saldo = saldoInicial;
         this.saldo = (saldoInicial > 0)? saldoInicial: 0;
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     }
     
     public String getNumeroCuenta()
     {return this.numeroCuenta;}
     
-<<<<<<< HEAD
-=======
     public void setNumeroCuenta(String numeroCuenta)
     {
         if(numeroCuenta != null && !numeroCuenta.isBlank())
@@ -56,13 +43,10 @@ public class CuentaBancaria {
         return true;
     }
     
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     public String getNombreTitular(){
         return this.nombreTitular;
     }
     
-<<<<<<< HEAD
-=======
     public void setNombreTitular(String nombreTitular){
         if(nombreTitular != null && !nombreTitular.isBlank())
             this.nombreTitular=nombreTitular;
@@ -80,7 +64,6 @@ public class CuentaBancaria {
     }
     
     
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     public double getSaldo()
     {
         return this.saldo;
@@ -158,8 +141,4 @@ public class CuentaBancaria {
     {
         activa = false;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
 }

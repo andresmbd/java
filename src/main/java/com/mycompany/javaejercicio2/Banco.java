@@ -3,19 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.javaejercicio2;
-<<<<<<< HEAD
-
-/**
- *
- * @author cohorte_5
-=======
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author USUARIO
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
  */
 public class Banco extends javax.swing.JFrame {
     
@@ -37,10 +30,6 @@ public class Banco extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-=======
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -176,18 +165,10 @@ public class Banco extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(table);
 
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-=======
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -198,13 +179,10 @@ public class Banco extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< HEAD
-=======
     
     private ArrayList<CuentaBancaria>cuentas = new ArrayList<>();
     
@@ -245,7 +223,6 @@ public class Banco extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         
     }//GEN-LAST:event_botonGuardarMouseClicked
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
 
     /**
      * @param args the command line arguments
@@ -273,8 +250,6 @@ public class Banco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-=======
     private javax.swing.JButton botonGuardar;
     private javax.swing.JTextField inputNombreTitular;
     private javax.swing.JTextField inputNumeroCuenta;
@@ -289,6 +264,5 @@ public class Banco extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable table;
->>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     // End of variables declaration//GEN-END:variables
 }
