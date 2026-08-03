@@ -2,7 +2,6 @@
 package com.mycompany.javaejercicio2;
 import javax.swing.JOptionPane;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -30,7 +29,6 @@ public class Main {
                }
             }
         
-
         CuentaBancaria cuenta = new CuentaBancaria(numeroCuenta, nombreTitular, saldoInicial);
         if(cuenta.validarNumeroCuenta(numeroCuenta) && cuenta.validarNombreTitular(nombreTitular))
         {

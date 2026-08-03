@@ -1,4 +1,3 @@
-
 package com.mycompany.javaejercicio2;
 
 public class CuentaBancaria {
@@ -52,8 +51,7 @@ public class CuentaBancaria {
         if(nombreTitular != null && !nombreTitular.isBlank())
             this.nombreTitular=nombreTitular;
     }
-    
-    
+     
     public boolean validarNombreTitular(String nombreTitular){
         nombreTitular.trim();
         for(int i=0;i<nombreTitular.length();i++)
