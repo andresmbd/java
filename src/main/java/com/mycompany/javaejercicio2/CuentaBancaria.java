@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 package com.mycompany.javaejercicio2;
 
 
+=======
+package com.mycompany.javaejercicio2;
+
+>>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
 public class CuentaBancaria {
     private String numeroCuenta;
     private String nombreTitular;
@@ -16,16 +21,66 @@ public class CuentaBancaria {
     {
         this.numeroCuenta = numeroCuenta;
         this.nombreTitular = nombreTitular;
+<<<<<<< HEAD
         this.saldo = saldoInicial;
+=======
+        //this.saldo = saldoInicial;
+        this.saldo = (saldoInicial > 0)? saldoInicial: 0;
+>>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     }
     
     public String getNumeroCuenta()
     {return this.numeroCuenta;}
     
+<<<<<<< HEAD
+=======
+    public void setNumeroCuenta(String numeroCuenta)
+    {
+        if(numeroCuenta != null && !numeroCuenta.isBlank())
+            this.numeroCuenta=numeroCuenta;
+    }
+    
+    public boolean validarNumeroCuenta(String numeroCuenta){
+
+        numeroCuenta =numeroCuenta.trim();
+        // && Integer.parseInt(numeroCuenta) < 0
+        if (numeroCuenta.length() < 8)
+            return false;
+        
+        for(int i =0;i<numeroCuenta.length();i++)
+        {
+            if(!Character.isDigit(numeroCuenta.charAt(i))) 
+                return false;
+        }
+        this.numeroCuenta=numeroCuenta;  
+        return true;
+    }
+    
+>>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     public String getNombreTitular(){
         return this.nombreTitular;
     }
     
+<<<<<<< HEAD
+=======
+    public void setNombreTitular(String nombreTitular){
+        if(nombreTitular != null && !nombreTitular.isBlank())
+            this.nombreTitular=nombreTitular;
+    }
+     
+    public boolean validarNombreTitular(String nombreTitular){
+        nombreTitular.trim();
+        for(int i=0;i<nombreTitular.length();i++)
+        {
+            if(Character.isDigit(nombreTitular.charAt(i)))
+                return false;
+        }
+        this.nombreTitular=nombreTitular;
+        return true;
+    }
+    
+    
+>>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
     public double getSaldo()
     {
         return this.saldo;
@@ -103,4 +158,8 @@ public class CuentaBancaria {
     {
         activa = false;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f3c20ec225a286770b1ca4a3a3d27854ac6dc8cb
 }
