@@ -4,6 +4,8 @@
  */
 package com.mycompany.arquitecturacapas.ui;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author cohorte_5
@@ -17,6 +19,32 @@ public class EstudianteRegistro extends javax.swing.JFrame {
      */
     public EstudianteRegistro() {
         initComponents();
+    }
+    
+    public String obtenerNombre()
+    {
+        return inputNombre.getText();
+    }
+    
+    public String obtenerApellido()
+    {
+        return inputApellido.getText();
+    }
+    
+    public int obtenerEdad()
+    {
+        int edad = (int) inputEdad.getValue();
+        return edad;
+    }
+    
+    public String obtenerCurso()
+    {
+        return inputCurso.getText();
+    }
+    
+    public JButton getBotonGuardar()
+    {
+        return botonGuardar;
     }
 
     /**
@@ -34,7 +62,7 @@ public class EstudianteRegistro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         inputNombre = new javax.swing.JTextField();
         inputApellido = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        botonGuardar = new javax.swing.JButton();
         inputEdad = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
         inputCurso = new javax.swing.JTextField();
@@ -63,8 +91,8 @@ public class EstudianteRegistro extends javax.swing.JFrame {
         inputApellido.setBackground(new java.awt.Color(255, 255, 255));
         inputApellido.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setText("Guardar");
+        botonGuardar.setBackground(new java.awt.Color(0, 102, 102));
+        botonGuardar.setText("Guardar");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Curso");
@@ -90,7 +118,7 @@ public class EstudianteRegistro extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
                         .addComponent(inputIdEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE))
-                    .addComponent(jButton1)
+                    .addComponent(botonGuardar)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -98,7 +126,7 @@ public class EstudianteRegistro extends javax.swing.JFrame {
                                 .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
                             .addComponent(jLabel4))
-                        .addGap(25, 25, 25)
+                        .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(inputEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(inputCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,8 +158,8 @@ public class EstudianteRegistro extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(inputIdEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addComponent(jButton1)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addComponent(botonGuardar)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -195,14 +223,16 @@ public class EstudianteRegistro extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new EstudianteRegistro().setVisible(true));
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonGuardar;
     private javax.swing.JTextField inputApellido;
     private javax.swing.JTextField inputCurso;
     private javax.swing.JSpinner inputEdad;
     private javax.swing.JTextField inputIdEstudiante;
     private javax.swing.JTextField inputNombre;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
