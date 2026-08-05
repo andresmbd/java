@@ -1,6 +1,5 @@
 
 package com.mycompany.sistemagestionproductos.models;
-import java.util.ArrayList;
 
 public abstract  class Producto {
     private String codigo;
@@ -8,22 +7,28 @@ public abstract  class Producto {
     private double precioBase;
     private int cantidadDisponible;
     private boolean activo;
-    // private ArrayList<Producto> productos = new ArrayList<>();
     
     public Producto(
             String codigo,
             String nombre,
             double precioBase,
             int cantidadDisponible,
-            boolean activo)
-    {
-        this.codigo=codigo;
-        this.nombre=nombre;
+            boolean activo
+        ){
+        
+        if(codigo == null || codigo.isBlank())
+            throw new IllegalArgumentException("El campo de el codigo no puede estar vacio");
+        this.codigo=codigo.trim();
+        
+        if(nombre == null || nombre.isBlank())
+            throw new IllegalArgumentException("Campo no valido, ingrese el campo de nombre");
+        this.nombre=nombre.trim();
+        
         if(precioBase<=0)
             throw new IllegalArgumentException("Solo se permite valores mayores que cero para el precio");
         this.precioBase=precioBase;
         
-        if(cantidadDisponible <=0)
+        if(cantidadDisponible < 0)
             throw new IllegalArgumentException("No se permite valores de cantidad negativa");
         this.cantidadDisponible=cantidadDisponible;
         
@@ -39,7 +44,7 @@ public abstract  class Producto {
     }
     
     public double getPrecioBase(){
-        return cantidadDisponible;
+        return precioBase;
     }
     
     public int getCantidadDisponible(){

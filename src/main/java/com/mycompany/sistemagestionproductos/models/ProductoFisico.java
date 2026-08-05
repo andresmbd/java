@@ -20,26 +20,18 @@ public class ProductoFisico extends Producto {
             throw new IllegalArgumentException("El costo no puede ser negativo");
         this.costoEnvio=costoEnvio;
     }
-
-    
-    
-    
-    
-    
-    
-    
     
     
     @Override
     public double calcularPrecioFinal() 
     {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        double recargo = getPrecioBase() * 0.08;
+        if(peso > 10)
+            return getPrecioBase() + costoEnvio + recargo;
+        
+        return getPrecioBase()+costoEnvio;
         
     }
-    
-    
-    
-    
     
     
 }
