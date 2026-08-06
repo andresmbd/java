@@ -10,7 +10,7 @@ package com.mycompany.sistemagestionproductos;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static void main(String[] args){
+        int[] numeros = new int[90];
     }
 }

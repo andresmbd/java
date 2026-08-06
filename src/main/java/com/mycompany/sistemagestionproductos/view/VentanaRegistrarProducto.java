@@ -8,14 +8,14 @@ package com.mycompany.sistemagestionproductos.view;
  *
  * @author USUARIO
  */
-public class VentanaListarProductos extends javax.swing.JFrame {
+public class VentanaRegistrarProducto extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaListarProductos.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaRegistrarProducto.class.getName());
 
     /**
-     * Creates new form VentanaListarProductos
+     * Creates new form VentanaRegistrarProducto
      */
-    public VentanaListarProductos() {
+    public VentanaRegistrarProducto() {
         initComponents();
     }
 
@@ -66,7 +66,7 @@ public class VentanaListarProductos extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaListarProductos().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaRegistrarProducto().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -40,7 +40,7 @@ public class ProductoService {
     
     public void registrarProducto(Producto producto){
         validarProducto(producto);
-        if(productoRepositorio.exiteCodigo(producto.getCodigo()))
+        if(productoRepositorio.existeCodigo(producto.getCodigo()))
             throw new IllegalArgumentException("Este codigo esta repetido");
         
         else productoRepositorio.guardar(producto);
@@ -51,29 +51,38 @@ public class ProductoService {
     }
     
     public Producto buscarProducto(String codigo){
-        if(!productoRepositorio.exiteCodigo(codigo))
+        if(!productoRepositorio.existeCodigo(codigo))
             throw new IllegalArgumentException("El codigo no existe en el sistema");
         return productoRepositorio.buscarPorCodigo(codigo);
     }
            
     
     public void actualizarProducto(Producto producto){
-        validarProducto(producto);
-        buscarProducto(producto.getCodigo());
-        
+        if(!productoRepositorio.existeCodigo(producto.getCodigo()))
+            throw new IllegalArgumentException("El codigo ingresaso: "+producto.getCodigo()+" no existe.");
+        productoRepositorio.actualizar(producto);
     }
     
     public void eliminarProducto(String codigo){
+        if(!productoRepositorio.existeCodigo(codigo))
+            throw new IllegalArgumentException("No se encontro tal codigo como "+codigo);
         productoRepositorio.eliminarPorCodigo(codigo);
     }
     
     public int obtenerCantidadProductos(){
-        throw new ExceptionInInitializerError("");
+        return listarProductos().size();
     }
     
     public double calcularValorTotalInventario(){
-        throw new ExceptionInInitializerError("");
+        double total=0;
+        ArrayList<Producto> productos =listarProductos();
+        
+        for(Producto producto:productos){
+            total += producto.calcularValorEnInventario();
+        }
+        return total;
     }
+    
     
     
     

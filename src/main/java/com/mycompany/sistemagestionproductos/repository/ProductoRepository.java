@@ -33,11 +33,15 @@ public class ProductoRepository {
     public boolean eliminarPorCodigo(String codigo)
             
     {
-        throw new ExceptionInInitializerError("no supported yet");
-
+        Producto producto =buscarPorCodigo(codigo);
+        if(producto != null){
+            productos.remove(producto);
+            return true;
+        }
+        return false;
     }
     
-    public boolean exiteCodigo(String codigo)
+    public boolean existeCodigo(String codigo)
     {
         for(Producto producto: productos)
         {
@@ -47,9 +51,20 @@ public class ProductoRepository {
         return false;
     }
     
+    public void actualizar(Producto producto){
+        for(int i=0;i<productos.size();i++)
+        {
+            if (productos.get(i).getCodigo().equals(producto.getCodigo())) 
+            {
+                productos.set(i, producto);
+                return;
+            } 
+        }
+    }
+    
     
 
-}            
+}           
             
             
             
