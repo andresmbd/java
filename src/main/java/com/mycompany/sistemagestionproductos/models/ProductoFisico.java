@@ -10,7 +10,7 @@ public class ProductoFisico extends Producto {
      
     
     public ProductoFisico(String codigo, String nombre, double precioBase, int cantidadDisponible, boolean activo, double peso, double costoEnvio) {
-        super(codigo, nombre, precioBase, cantidadDisponible, activo);
+        super(codigo, nombre, precioBase, cantidadDisponible);
         
         if(peso <= 0)
             throw new IllegalArgumentException("Peso invalido, debes ingresar un valor mayor a 0");

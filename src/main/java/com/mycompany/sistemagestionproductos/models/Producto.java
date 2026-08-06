@@ -12,8 +12,7 @@ public abstract  class Producto {
             String codigo,
             String nombre,
             double precioBase,
-            int cantidadDisponible,
-            boolean activo
+            int cantidadDisponible
         ){
         
         if(codigo == null || codigo.isBlank())
@@ -32,7 +31,7 @@ public abstract  class Producto {
             throw new IllegalArgumentException("No se permite valores de cantidad negativa");
         this.cantidadDisponible=cantidadDisponible;
         
-        this.activo=activo;
+        this.activo=true;
     }
     
     public String getCodigo(){
